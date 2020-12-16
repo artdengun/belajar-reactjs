@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Biodata from './components/Biodata';
+import DataBaru from './components/DataBaru';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Biodata nama="Deni Gunawan" semester="10" hobi={<Hobi />}/> 
+      <DataBaru nama="Ahmad Zaelani" semester="7" hobi={<Hobi />} />
     </div>
+  );
+}
+
+const Hobi = ()=>{
+  return(
+    <ul>
+      <li>Belajar</li>
+      <li>Ngulik</li>
+      <li>Bercanda</li>
+    </ul>
   );
 }
 
