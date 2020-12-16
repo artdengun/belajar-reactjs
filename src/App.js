@@ -1,24 +1,16 @@
-import React from 'react';
-import Biodata from './components/Biodata';
-import DataBaru from './components/DataBaru';
+import React, { Component } from 'react';
+import Counter from './components/Counter';
+import FormInput from "./components/FormInput";
 
-function App() {
-  return (
-    <div>
-      <Biodata nama="Deni Gunawan" semester="10" hobi={<Hobi />}/> 
-      <DataBaru nama="Ahmad Zaelani" semester="7" hobi={<Hobi />} />
-    </div>
-  );
-}
-
-const Hobi = ()=>{
-  return(
-    <ul>
-      <li>Belajar</li>
-      <li>Ngulik</li>
-      <li>Bercanda</li>
-    </ul>
-  );
+class App extends Component{
+  render(){
+    return(
+      <div>
+        <Counter />
+        <FormInput />
+      </div>
+    );
+  }
 }
 
 export default App;
